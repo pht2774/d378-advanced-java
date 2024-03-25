@@ -25,9 +25,14 @@
 <main id="wrapper">
   <div class="scene" id="welcome">
     <article class="content">
-
-
-
+      <div class="row">
+        <div class="col-12" *ngIf="presentationTime && presentationTime.length >= 3">
+          <p> Upcoming Live Presentation</p>
+          <p> US Eastern Time: {{presentationTime[0]}}</p>
+          <p> US Mountain Time: {{presentationTime[1]}}</p>
+          <p> US Universal Time: {{presentationTime[2]}}</p>
+        </div>
+      </div>
       <div class="row">
         <div class=""col-12>
           <div class="gallery">
